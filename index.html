@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+
+		<title>jQuery popin solution - prettyPopin - by Stephane Caron</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+		<script type="text/javascript" charset="utf-8">
+			google.load("jquery", "1.3");
+		</script>
+
+		<style type="text/css" media="screen">
+			body {
+				font-size: 11px;
+			}
+		</style>
+		
+		<link rel="stylesheet" href="css/prettyPopin.css" type="text/css" media="screen" charset="utf-8" />
+		<script src="js/jquery.prettyPopin.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul class="noBull">
+				<li><a href="ajax/regular.html" rel="prettyPopin">Regular content (defined width, fixed)</a></li>
+				<li><a href="ajax/page-1.html" rel="prettyPopin">Content with paging (defined width, follow the scroll)</a></li>
+				<li><a href="ajax/form.html" rel="prettyPopin">Ajax form (width inherited from the &lt;form&gt;, follow the scroll)</a></li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("a[rel^='prettyPopin']:eq(0)").prettyPopin({width: 550,followScroll:false});
+			$("a[rel^='prettyPopin']:eq(1)").prettyPopin({width:300});
+			$("a[rel^='prettyPopin']:eq(2)").prettyPopin({
+				callback : function(){
+					alert('This popin has a callback');
+				}
+			});
+		});
+		</script>
+
+		
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-122908-8");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+	</body>
+</html>
