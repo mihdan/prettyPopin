@@ -15,7 +15,7 @@ This plugin has been tested and is known to work in the following browsers
 * Internet Explorer 6.0 (PC) 
 * Internet Explorer 7.0 (PC) 
 
-# Copyright
+## Copyright
 
 This script is licensed under Creative Commons Attribution 2.5. So you can use it in all you projects even commercial ones. Donations are always welcome
 
